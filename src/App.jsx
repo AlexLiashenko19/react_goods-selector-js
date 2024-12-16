@@ -17,11 +17,11 @@ export const goods = [
 ];
 
 export const App = () => {
-  const [selected, setSelected] = useState([]);
+  const [selected, setSelected] = useState('Jam');
 
-  const handleClearSelection = () => setSelected('');
+  const handleClearSelection = () => setSelected([]);
   const handleRowClick = good => {
-    setSelected(selected === good ? '' : good);
+    setSelected(selected.includes(good) === good ? [] : good);
   };
 
   return (
